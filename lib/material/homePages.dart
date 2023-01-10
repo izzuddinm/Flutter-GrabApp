@@ -18,13 +18,13 @@ class _HomePagesState extends State<HomePages> {
         backgroundColor: Colors.white,
 
         body: SingleChildScrollView(
-          physics:
-              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          // physics:
+          //     BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           child: Stack(
             clipBehavior: Clip.none,
             children: [
               Container(
-                color: Color.fromARGB(255, 79, 209, 138),
+                color: Color.fromARGB(255, 25, 187, 98),
                 height: 70,
               ),
               const SizedBox(
@@ -268,7 +268,7 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/ride.png",
+                                    "lib/assets/ic-bike.png",
                                     width: 100,
                                     height: 66,
                                   ),
@@ -289,7 +289,7 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/makanan.png",
+                                    "lib/assets/ic-food.png",
                                     width: 100,
                                     height: 66,
                                   ),
@@ -310,7 +310,7 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/mobil.png",
+                                    "lib/assets/ic-car.png",
                                     width: 100,
                                     height: 66,
                                   ),
@@ -331,7 +331,7 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/mart.png",
+                                    "lib/assets/ic-mart.png",
                                     width: 100,
                                     height: 66,
                                   ),
@@ -352,7 +352,7 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/express.png",
+                                    "lib/assets/ic-express.png",
                                     width: 100,
                                     height: 66,
                                   ),
@@ -373,11 +373,11 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/mobil.png",
+                                    "lib/assets/ic-health.png",
                                     width: 100,
                                     height: 66,
                                   ),
-                                  Text("Mobil"),
+                                  Text("Kesehatan"),
                                 ],
                               ),
                             ),
@@ -394,11 +394,11 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/mart.png",
+                                    "lib/assets/ic-jastip.png",
                                     width: 100,
                                     height: 66,
                                   ),
-                                  Text("Mart"),
+                                  Text("Jastip"),
                                 ],
                               ),
                             ),
@@ -415,11 +415,11 @@ class _HomePagesState extends State<HomePages> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "lib/assets/express.png",
+                                    "lib/assets/ic-more.png",
                                     width: 100,
                                     height: 66,
                                   ),
-                                  Text("Express"),
+                                  Text("Lainya"),
                                 ],
                               ),
                             ),

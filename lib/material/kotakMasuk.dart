@@ -1,205 +1,191 @@
-import "package:flutter/material.dart";
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class KotakMasukPages extends StatefulWidget {
-  const KotakMasukPages({super.key});
-
+class KotakMasukPages extends StatelessWidget {
   @override
-  State<KotakMasukPages> createState() => _KotakMasukPagesState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      home: MyHomePage(),
+    );
+  }
 }
 
-class _KotakMasukPagesState extends State<KotakMasukPages> {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SingleChildScrollView(
-          physics:
-              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-          child: Column(
-            children: [
-              Container(
-                height: 40,
-              ),
-              Container(
-                color: const Color.fromARGB(255, 255, 255, 255),
-                child: Row(
-                  children: [
-                    const Padding(padding: EdgeInsets.all(10)),
-                    const Text(
-                      "Kotak Masuk",
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ),
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.white,
+            bottom: TabBar(
+              unselectedLabelColor: Colors.grey,
+              indicator: BoxDecoration(),
+              tabs: [
+                Tab(
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    Container(
-                      width: 150,
-                    ),
-                    SizedBox(
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.delete_outline_outlined,
-                          color: Colors.grey,
-                          size: 30.0,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Row(
-                  children: [
-                    SizedBox(
-                      child: Container(
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 65,
-                            ),
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              elevation: 0,
-                              color: Color.fromARGB(255, 46, 165, 92),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.message_outlined,
-                                      color: Colors.white,
-                                      size: 24.0,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Chat",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              elevation: 0,
-                              color: Color.fromARGB(255, 220, 254, 255),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.notifications,
-                                      size: 24.0,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Notifikasi",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 60,
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      "lib/assets/bgcustomer.png",
-                      width: 180,
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    const Text(
-                      "Temukan Chat Kamu dengan ",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
-                    const Text(
-                      "staf layanan pelanggan kami di sini!",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
-                    const Text(
-                      " di sini!",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    const Text(
-                      "Kamu juga bisa mendapatkan bantuan  ",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    elevation: 0,
+                    color: Color.fromARGB(255, 83, 124, 99),
+                    child: Row(
                       children: const [
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                        ),
+                        Icon(
+                          Icons.chat_outlined,
+                          size: 24.0,
+                        ),
                         SizedBox(
-                          width: 40,
+                          width: 10,
                         ),
                         Text(
-                          "dari mereka melalui ",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                        Text(
-                          "Pusat Bantuan ",
+                          "Chat",
                           style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green),
-                        ),
-                        Text(
-                          "kami!",
-                          style: TextStyle(fontSize: 15),
+                              fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ],
-                    )
-                  ],
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 0,
+                    color: Color.fromARGB(255, 83, 124, 99),
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                        ),
+                        Icon(
+                          Icons.chat_outlined,
+                          size: 24.0,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Notifikasi",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            title: Text(
+              'Kotak Masuk',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 23,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            actions: [
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    print("Setting Pressed");
+                  });
+                },
+                icon: const Icon(
+                  Icons.delete_rounded,
+                  size: 30.0,
+                  color: Colors.grey,
                 ),
               ),
-              SizedBox(
-                height: 120,
-              )
+            ],
+          ),
+          body: TabBarView(
+            children: [
+              Center(
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "lib/assets/bgcustomer.png",
+                        width: 210,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        "Temukan Chat Kamu dengan ",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                      const Text(
+                        "staf layanan pelanggan kami di sini!",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                      const Text(
+                        " di sini!",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      const Text(
+                        "Kamu juga bisa mendapatkan bantuan  ",
+                        style: TextStyle(fontSize: 15),
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          SizedBox(
+                            width: 40,
+                          ),
+                          Text(
+                            "dari mereka melalui ",
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Text(
+                            "Pusat Bantuan ",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green),
+                          ),
+                          Text(
+                            "kami!",
+                            style: TextStyle(fontSize: 15),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Center(
+                  child: Text(
+                "Tidak ada notifikasi !",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              )),
             ],
           ),
         ),

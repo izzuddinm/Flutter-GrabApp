@@ -13,41 +13,39 @@ class _PembayaranPagesState extends State<PembayaranPages> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Text(
+            "Pembayaran",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  print("Setting Pressed");
+                });
+              },
+              icon: const Icon(
+                Icons.settings,
+                size: 30.0,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
         body: SingleChildScrollView(
           physics:
               BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           child: Column(
             children: [
               Container(
-                height: 40,
-              ),
-              Container(
-                color: const Color.fromARGB(255, 255, 255, 255),
-                child: Row(
-                  children: [
-                    const Padding(padding: EdgeInsets.all(10)),
-                    const Text(
-                      "Pembayaran",
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Container(
-                      width: 155,
-                    ),
-                    SizedBox(
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.settings,
-                          color: Colors.grey,
-                          size: 30.0,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                height: 10,
               ),
               const SizedBox(
                 height: 10,

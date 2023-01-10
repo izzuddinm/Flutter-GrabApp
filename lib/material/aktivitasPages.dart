@@ -13,63 +13,32 @@ class _AktivitasPagesState extends State<AktivitasPages> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Text(
+            "Aktivitas",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          actions: [
+            const Icon(
+              Icons.developer_board,
+              size: 40.0,
+              color: Colors.grey,
+            ),
+          ],
+        ),
         body: SingleChildScrollView(
           physics:
               BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           child: Column(
             children: [
               Container(
-                height: 40,
-              ),
-              Container(
-                color: Color.fromARGB(255, 255, 255, 255),
-                child: Row(
-                  children: [
-                    Padding(padding: EdgeInsets.all(10)),
-                    Text(
-                      "Aktivitas",
-                      style:
-                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      child: Container(
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 120,
-                            ),
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              elevation: 0,
-                              color: Color.fromARGB(255, 220, 254, 255),
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.replay_outlined,
-                                      size: 24.0,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Riwayat",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                height: 10,
               ),
               SizedBox(
                 height: 180,
@@ -95,6 +64,9 @@ class _AktivitasPagesState extends State<AktivitasPages> {
                         )),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 150,
               )
             ],
           ),
